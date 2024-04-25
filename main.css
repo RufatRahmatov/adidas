@@ -1,0 +1,21 @@
+body {
+  padding: 10px;
+  background-color: black;
+  color: black;
+  margin: auto;
+}
+
+div {
+  background-color: red;
+}
+div button {
+  background-color: blue;
+}
+div button span {
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
