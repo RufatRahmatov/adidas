@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:scss": "sass main.scss main.css",
-    "compile:scss:watch": "sass main.scss main.css --watch"
+    "compile:scss": "sass styles/scss styles/css",
+    "compile:scss:watch": "sass styles/scss:styles/css --watch",
+    "compile:scss:compress": "sass styles/scss:styles/css --style compressed",
+    "compile:sass:watch:compress": "sass styles/scss:styles/css --watch --style compressed",
+    "compile:sass:watch:compress:pervin_edition": "sass styles/scss:styles/css --watch --style compressed"
   },
   "author": "",
   "license": "ISC",

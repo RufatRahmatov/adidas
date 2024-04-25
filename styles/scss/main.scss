@@ -1,0 +1,39 @@
+// main.scss -> main.css {compile}
+@import "colors";
+
+// default paramaters
+@mixin justifyAdapter ($justifyContent: flex-start) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: center;
+  height: 100vh;
+}
+
+div {
+  
+  @include justifyAdapter;
+}
+
+@mixin beautifulFont {
+  color: $brand;
+  font-weight: 600;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+
+  @include beautifulFont;
+}
+
+h2 {
+  font-size: 30px;
+
+  @include beautifulFont;
+}
+
+h3 {
+  font-size: 20px;
+
+  @include beautifulFont;
+}
