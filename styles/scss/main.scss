@@ -2,7 +2,7 @@
 @import "colors";
 
 // default paramaters
-@mixin justifyAdapter ($justifyContent: flex-start) {
+@mixin justifyAdapter($justifyContent: flex-start) {
   display: flex;
   justify-content: $justifyContent;
   align-items: center;
@@ -10,8 +10,7 @@
 }
 
 div {
-  
-  @include justifyAdapter;
+  // @include justifyAdapter;
 }
 
 @mixin beautifulFont {
@@ -20,20 +19,481 @@ div {
   text-align: center;
 }
 
-h1 {
-  font-size: 40px;
-
-  @include beautifulFont;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-h2 {
-  font-size: 30px;
-
-  @include beautifulFont;
+body {
+  font-family: "Open Sans", sans-serif;
 }
 
-h3 {
-  font-size: 20px;
-
-  @include beautifulFont;
+.wrapper {
+  display: flex;
+  flex-direction: column;
 }
+
+.container-1 {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-right: 30px;
+  margin-top: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  ul > li:nth-child(4):hover {
+    .sale {
+      left: 0;
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+
+  svg {
+    width: 60px;
+    height: 60px;
+    padding-left: 20px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+}
+
+.inp--container {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #eceff1;
+
+  i {
+    padding-right: 8px;
+  }
+
+  width: 100%;
+  justify-content: space-between;
+  // border: 2px solid;
+  height: 30px;
+}
+
+.inp--1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-right: 3rem;
+
+  i {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .icon--1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 50px;
+    margin: 0 10px 0 0;
+    position: relative;
+
+    div {
+      div {
+        
+        position: absolute;
+        cursor: pointer;
+        background-color: yellow;
+        border-radius: 2rem;
+        bottom: 13px;
+        height: 1.5rem;
+        width: 1.5rem;
+
+        p {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}
+.circle{
+  animation: bounce 2s infinite  ;
+}
+
+input {
+  border: 0;
+  gap: 15px;
+  outline: none;
+  display: flex;
+  padding-right: 5px;
+  padding: 5px;
+  background-color: #eceff1;
+}
+.bold {
+  font-weight: 900;
+}
+
+.sale {
+  border: 1px solid;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.3rem;
+  left: 3000;
+  opacity: 0;
+  height: 10rem;
+  width: 100%;
+  background-color: white;
+}
+.sale-cards-card {
+  display: flex;
+  gap: 30px;
+}
+
+.img-big {
+  height: 100vh;
+  background-image: url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/ss24_adiclubdays_hp_general_mh_d_e7c2f4ab3e.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+  .img-text {
+    display: flex;
+    flex-direction: column;
+    width: 44%;
+    color: white;
+    grid-row: 8/10;
+    padding-left: 150px;
+    gap: 20px;
+    button {
+      width: 150px;
+      padding: 8px 16px;
+      gap: 10px;
+      align-items: center;
+      display: flex;
+    }
+    p {
+      font-size: 18px;
+    }
+    h1 {
+      font-size: 35px;
+    }
+  }
+}
+.button-2n {
+  display: flex;
+  gap: 10px;
+}
+.button-input {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+
+  &-3n {
+    .button-white:hover {
+      background-color: #000;
+      color: white;
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.carousel-container {
+  width: 1600px;
+  margin: 0 auto;
+
+  .button-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    .button-3n {
+      button {
+        padding: 12px;
+        border: none;
+        background-color: #000;
+        color: #fff;
+      }
+      button:last-child {
+        background-color: #fff;
+        color: #000;
+        box-shadow: inset 0 0 0 1px #000;
+
+        // border:1px solid black;
+      }
+      button:last-child:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+
+    .wiew-all {
+      a {
+        color: #000;
+      }
+      a:hover {
+        color: #fff;
+        background-color: #000;
+      }
+    }
+  }
+
+  .container-img {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    .oll-img {
+      & > p {
+        position: absolute;
+        bottom: 50px;
+        padding: 10px;
+      }
+    }
+
+    .oll-img {
+      img {
+        width: 278px;
+      }
+    }
+  }
+}
+
+.container-img-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 80px;
+  a {
+    color: #000;
+  }
+  a:hover {
+    background-color: #000;
+    box-shadow: inset 0 0 0 1px #000;
+    color: white;
+  }
+  p {
+    font-size: 12px;
+  }
+}
+.shop-s {
+  margin-top: 30px;
+}
+.shop-now {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.shop-s {
+  margin-top: 10px;
+}
+
+#popular-right-now-sec {
+  padding-left: 7%;
+  margin-bottom: 70px;
+
+  .writings-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+
+    div {
+      width: 500px;
+      border-bottom: 1px solid black;
+      
+      h1 {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 45px;
+      }
+    }
+    div:hover{
+      border-bottom: 5px solid black;
+    }
+  }
+
+  .popular {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    h1 {
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 30px;
+    }
+  }
+}
+
+
+.text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  background-color: #f5f5e5;
+  padding: 0px 50px;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+.text-1 {
+  h2 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+}
+.text-container {
+  h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+}
+.futer-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ede734;
+  height: 110px;
+  gap: 14px;
+
+  button {
+    background-color: #000;
+    padding: 8px 16px;
+    font-size: 18px;
+    color: white;
+    transition: 0.5s ease-in;
+    i {
+      margin-left: 10px;
+    }
+    &:hover {
+      color: #a0a0a0;
+    }
+  }
+}
+
+footer {
+  padding: 1% 25%;
+  .container {
+    display: flex;
+
+    .link-container {
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+      div {
+        gap: 5px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .icon-wrapper {
+        cursor: pointer;
+        gap: 5px;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        color: white;
+      }
+    }
+  }
+}
+.footer-and {
+  display: flex;
+  background-color: #000000e2;
+  color: #a8a5a5;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  flex-direction: column;
+  gap: 40px;
+  .head-1 {
+    display: flex;
+  }
+  .bottom {
+    display: flex;
+  }
+}
+
+
+.carousel-container {
+  width: 1600px;
+  margin: 0 auto;
+
+  .button-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    .button-3n {
+      button {
+        padding: 12px;
+        border: none;
+        background-color: #000;
+        color: #fff;
+      }
+      button:last-child {
+        background-color: #fff;
+        color: #000;
+        box-shadow: inset 0 0 0 1px #000;
+        // border:1px solid black;
+      }
+    }
+
+    .wiew-all {
+      a {
+        color: #000;
+      }
+      a:hover {
+        color: #fff;
+        background-color: #000;
+      }
+    }
+  }
+
+  .container-img {
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+
+    .oll-img {
+      img {
+        width: 278px;
+      }
+    }
+  }
+}
+
+
+@keyframes bounce {
+  0%, 9%, 18%, 80%, 100% {transform: translateY(0);} 
+  2% {transform: translateY(-10px);} 
+  3% {transform: translateY(-3px);} 
+  5% {transform: translateY(-8px);} 
+  7% {transform: translateY(-2px);} 
+  11% {transform: translateY(-10px);} 
+  13% {transform: translateY(-3px);} 
+  14% {transform: translateY(-8px);} 
+  16% {transform: translateY(-2px);} 
+ } 
+
+// animation:{
+// bounce:"custom 3s liner infiniter"
+// }
